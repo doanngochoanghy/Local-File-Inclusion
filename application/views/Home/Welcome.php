@@ -1,0 +1,1 @@
+<h1>Welcome to the Student Information Management System</h1>
