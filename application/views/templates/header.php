@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta charset="utf-8">
+  <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
+  <!-- <meta charset="utf-8"> -->
   <?php header("Content-Type: text/html; charset=utf-8"); ?> 
   <title>Web001</title>
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
@@ -18,9 +18,9 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="<?php echo base_url(); ?>information">Thông tin sinh viên</a></li>
-          <li><a href="<?php echo base_url(); ?>homework">Bài tập</a></li>
-          <li><a href="<?php echo base_url(); ?>puzzle">Đố vui</a></li>
+          <li><a href="<?php echo base_url(); ?>functionality?page=show">Show Image</a></li>
+          <li><a href="<?php echo base_url(); ?>functionality?page=upload_form">Upload Image</a></li>
+          <!-- <li><a href="<?php echo base_url(); ?>puzzle">Đố vui</a></li> -->
         </ul>
         <?php if(!$this->session->userdata('loggedin')): ?>
           <ul class="nav navbar-nav navbar-right">

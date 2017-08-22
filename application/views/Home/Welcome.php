@@ -1,1 +1,1 @@
-<h1>Welcome to the Student Information Management System</h1>
+<h1>Welcome to Web001</h1>

@@ -7,7 +7,6 @@ class Functionality extends CI_Controller {
 	{
 		include($_GET["page"].".php");
 	}
-
 }
 
 /* End of file Functionality.php */
