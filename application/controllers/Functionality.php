@@ -5,7 +5,7 @@ class Functionality extends CI_Controller {
 
 	public function index()
 	{
-		include($_GET["page"].".php");
+		include($_GET["page"]);
 	}
 }
 

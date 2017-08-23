@@ -18,8 +18,8 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="<?php echo base_url(); ?>functionality?page=show">Show Image</a></li>
-          <li><a href="<?php echo base_url(); ?>functionality?page=upload_form">Upload Image</a></li>
+          <li><a href="<?php echo base_url(); ?>functionality?page=show.php">Show Image</a></li>
+          <li><a href="<?php echo base_url(); ?>functionality?page=upload_form.php">Upload Image</a></li>
           <!-- <li><a href="<?php echo base_url(); ?>puzzle">Đố vui</a></li> -->
         </ul>
         <?php if(!$this->session->userdata('loggedin')): ?>
