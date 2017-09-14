@@ -1,22 +1,9 @@
 <?php echo validation_errors('<div class="alert alert-dismissible alert-danger">','</div>'); ?>
 
-<?php echo form_open('users/register'); ?>
+<?php echo form_open('Users/Register'); ?>
 <div class="row">
 	<div class="col-md-4 col-md-offset-4">
 		<h1 class="text-center">Sign Up</h1>
-
-		<div class="form-group">
-			<label>Name</label>
-			<input type="text" class="form-control" name="name" placeholder="Name" required="" autofocus="">
-		</div>
-		<div class="form-group">
-			<label>Email</label>
-			<input type="text" class="form-control" name="email" placeholder="Email" required="" autofocus="">
-		</div>
-		<div class="form-group">
-			<label>Phone</label>
-			<input type="text" class="form-control" name="phone" placeholder="Phone" required="">
-		</div>
 
 		<div class="form-group">
 			<label>Username</label>

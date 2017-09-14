@@ -18,14 +18,14 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="<?php echo base_url(); ?>functionality?page=show.php">Show Image</a></li>
-          <li><a href="<?php echo base_url(); ?>functionality?page=upload_form.php">Upload Image</a></li>
+          <li><a href="<?php echo base_url(); ?>Functionality?page=Show.php">Show Image</a></li>
+          <li><a href="<?php echo base_url(); ?>Functionality?page=Upload_form.php">Upload Image</a></li>
           <!-- <li><a href="<?php echo base_url(); ?>puzzle">Đố vui</a></li> -->
         </ul>
         <?php if(!$this->session->userdata('loggedin')): ?>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?php echo base_url(); ?>users/login">Log In</a></li>
-            <li><a href="<?php echo base_url(); ?>users/register">Register</a></li>
+            <li><a href="<?php echo base_url(); ?>Users/Login">Log In</a></li>
+            <li><a href="<?php echo base_url(); ?>Users/Register">Register</a></li>
           </ul>
         <?php else: ?>
           <ul class="nav navbar-nav navbar-right">
@@ -49,7 +49,7 @@
                       <?php echo form_close(); ?>
                     </li>
                     <li>
-                      <?php echo form_open('users/logout'); ?>
+                      <?php echo form_open('Users/Logout'); ?>
                       <button type="" class="btn btn-success btn-sm col-md-8 col-md-offset-2">
                         Log Out
                       </button>

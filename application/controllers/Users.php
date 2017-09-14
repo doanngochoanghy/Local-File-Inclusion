@@ -8,7 +8,7 @@ class Users extends CI_Controller {
 			redirect(base_url(),'')	;
 		}
 		else{
-			redirect(base_url().'users/login');
+			redirect(base_url().'Users/Login');
 		}
 	}
 	public function login()
@@ -22,7 +22,7 @@ class Users extends CI_Controller {
 				// $this->form_validation->set_rules('password', 'Password', 'required');
 			if ($this->form_validation->run() == FALSE) {
 				$this->load->view('templates/header');
-				$this->load->view('users/login');
+				$this->load->view('Users/Login');
 				$this->load->view('templates/footer');
 			} else {
 				$username=htmlspecialchars($this->input->post('username'),ENT_QUOTES);
@@ -37,7 +37,7 @@ class Users extends CI_Controller {
 					redirect(base_url(),'');
 				} else {
 					$this->session->set_flashdata('message', 'Login is invalid.');
-					redirect('users/login','');
+					redirect('Users/Login','');
 				}
 			}
 		}
@@ -57,14 +57,14 @@ class Users extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('templates/header');
-			$this->load->view('users/register');
+			$this->load->view('Users/Register');
 			$this->load->view('templates/footer');
 		} else {
 			$data = array('username' => htmlspecialchars($this->input->post('username'),ENT_QUOTES),'password' => md5($this->input->post('password')),
 				);
 			$this->users_model->register($data);
 			$this->session->set_flashdata('message', 'You are registered. You can login');
-			redirect(base_url()."users/login",'');
+			redirect(base_url()."Users/Login",'');
 		}
 	}
 }

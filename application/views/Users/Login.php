@@ -1,6 +1,6 @@
 <?php echo validation_errors('<div class="alert alert-dismissible alert-danger">','</div>'); ?>
 
-<?php echo form_open('users/login'); ?>
+<?php echo form_open('Users/Login'); ?>
 <div class="row">
 	<div class="col-md-4 col-md-offset-4">
 		<h1 class="text-center">Sign In</h1>

@@ -32,5 +32,5 @@ if (!empty($_FILES['filetoupload']['tmp_name'])) {
 else {
 	$this->session->set_flashdata('message', 'Chon file upload');
 }
-redirect('functionality?page=upload_form.php');
+redirect('Functionality?page=Upload_form.php');
 ?>
