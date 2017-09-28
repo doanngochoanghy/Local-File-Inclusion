@@ -7,14 +7,15 @@ if (!empty($_FILES['filetoupload']['tmp_name'])) {
 	$filename=$_FILES['filetoupload']['name'];
 	if (in_array(pathinfo($filename,PATHINFO_EXTENSION),$arrayExtension)) {
 		if (!file_exists("uploads/".$filename)) {
-			move_uploaded_file($_FILES['filetoupload']['tmp_name'],"uploads/".$filename);
-			$img=@imagecreatefromgif("uploads/".$filename);
+			// move_uploaded_file($_FILES['filetoupload']['tmp_name'],"uploads/".$filename);
+			$img=@imagecreatefromgif($_FILES['filetoupload']['tmp_name']);
 			if ($img==False) {
-				unlink("uploads/$filename");
+				// unlink("uploads/$filename");
 				$this->session->set_flashdata('message', 'Upload Failed.');
 			}
 			else
 			{
+				imagegif($img,"uploads/".$filename);
 				$this->session->set_flashdata('message', 'Upload Successed.');
 			}
 		}
