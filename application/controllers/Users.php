@@ -28,7 +28,6 @@ class Users extends CI_Controller {
 				$username=htmlspecialchars($this->input->post('username'),ENT_QUOTES);
 				$password=md5($this->input->post('password'));
 				$user_data=$this->users_model->login($username,$password);
-				//var_dump($user_data);
 				if ($user_data!=FALSE) {
 					$user_data=(array)$user_data;
 					$user_data["loggedin"] = true;
@@ -37,6 +36,7 @@ class Users extends CI_Controller {
 					redirect(base_url(),'');
 				} else {
 					$this->session->set_flashdata('message', 'Login is invalid.');
+
 					redirect('Users/Login','');
 				}
 			}
